@@ -26,6 +26,7 @@
   <!-- Vue component styles -->
   <link href="components/adder/adder.css" rel="stylesheet">
   <link href="components/subtracter/subtracter.css" rel="stylesheet">
+  <link href="components/multiply/multiply.css" rel="stylesheet">
   <link href="components/findSum/findSum.css" rel="stylesheet">
   <link href="components/coder/coder.css" rel="stylesheet">
 
@@ -119,6 +120,31 @@
         <p>Learn more at <a href="https://vuejs.org/">Vue.js</a>! </p>
       </article>
 
+      <article id="multiplier" class="col-md-4 ">
+        <h2>Vue is awesome!</h2>
+        <p>Two-way data binding listens for changes and automatically updates.</p>
+        <p>This is component Multiplies!</p>
+
+        <fieldset class="mt-2">
+          <label for="guestOne">Enter your name (2 to 20 characters):</label>
+          <input v-model="guestOne" id="guestOne" type="text" minlength="2" maxlength="20">
+        </fieldset>
+
+        <fieldset class="mt-2">
+          <label for="firstNumber">Enter first number (1 to 100):</label>
+          <input v-model="firstNumber" id="firstNumber" type="number" min="1" max="100">
+          <span id="firstWarning" class="text-danger"></span>
+        </fieldset>
+
+        <fieldset class="mt-2">
+          <label for="secondNumber">Enter second number (1 to 100):</label>
+          <input v-model="secondNumber" id="secondNumber" type="number" min="1" max="100">
+          <span id="secondWarning" class="text-danger"></span>
+        </fieldset>
+
+        <h3 class="mt-2">{{result}}</h3>
+      </article>
+
     </div>
 
   </main>
@@ -156,6 +182,7 @@
 
   <script src="components/adder/adder.js"></script>
   <script src="components/subtracter/subtracter.js"></script>
+  <script src="components/multiply/multiply.js"></script>
   <script src="components/findSum/findSum.js"></script>
   <script src="components/coder/coder.js"></script>
 
